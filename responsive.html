@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header / Navbar */
+        .navbar {
+            background-color: #222222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            color: #9d9d9d;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        .nav-item:hover {
+            color: #ffffff;
+        }
+
+        .nav-item.active {
+            color: #ffffff;
+            background-color: #080808;
+        }
+
+        .login-btn {
+            color: #9d9d9d;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 14px;
+        }
+
+        .login-btn:hover {
+            color: #ffffff;
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            flex: 1;
+            background-color: #eee;
+        }
+
+        /* Left Sidebar */
+        .left-sidebar {
+            width: 15%;
+            padding: 20px 15px;
+            background-color: #eee;
+        }
+
+        .sidebar-link {
+            display: block;
+            color: #337ab7;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .sidebar-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Middle Content */
+        .content {
+            width: 65%;
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-left: 1px solid #e7e7e7;
+            border-right: 1px solid #e7e7e7;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .content p {
+            color: #333;
+            line-height: 1.5;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .divider {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+
+        .content h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Right Sidebar (ADS) */
+        .right-sidebar {
+            width: 20%;
+            padding: 20px 15px;
+            background-color: #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ads-box {
+            background-color: #f5f5f5;
+            border: 1px solid #e3e3e3;
+            border-radius: 4px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-size: 13px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #555555;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive Layout for Mobile Devices */
+        @media screen and (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .left-sidebar, .content, .right-sidebar {
+                width: 100%;
+            }
+
+            .content {
+                border-left: none;
+                border-right: none;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-left {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .login-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="#" class="nav-item">Logo</a>
+            <a href="#" class="nav-item active">Home</a>
+            <a href="#" class="nav-item">About</a>
+            <a href="#" class="nav-item">Projects</a>
+            <a href="#" class="nav-item">Contact</a>
+        </div>
+        <a href="#" class="login-btn">&#10145; Login</a>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Left Navigation Links -->
+        <div class="left-sidebar">
+            <a href="#" class="sidebar-link">Link</a>
+            <a href="#" class="sidebar-link">Link</a>
+            <a href="#" class="sidebar-link">Link</a>
+        </div>
+
+        <!-- Middle Main Content -->
+        <div class="content">
+            <h1>Welcome</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            
+            <hr class="divider">
+
+            <h3>Test</h3>
+            <p>Lorem ipsum...</p>
+        </div>
+
+        <!-- Right Sidebar (Ads) -->
+        <div class="right-sidebar">
+            <div class="ads-box">ADS</div>
+            <div class="ads-box">ADS</div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Footer Text
+    </div>
+
+</body>
+</html>
