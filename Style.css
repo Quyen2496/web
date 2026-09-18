@@ -283,3 +283,58 @@ body{
 #menu ul li:hover ul{
     visibility: visible;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #666;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+header, nav, section, article, aside, footer {
+  border: 1px solid #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #333;
+}
+
+header, nav, footer {
+  height: 50px;
+}
+
+.main-content {
+  display: flex;
+  gap: 5px;
+}
+
+.left-col {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+section, article {
+  height: 100px;
+}
+
+aside {
+  flex: 1;
+}
